@@ -1,0 +1,9 @@
+﻿@model Product[]
+
+<h2>Order Summary</h2>
+<ul>
+    @foreach (var product in Model)
+    {
+        <li>@product.Name - $@product.Topings</li>
+    }
+</ul>

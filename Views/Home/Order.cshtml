@@ -1,0 +1,15 @@
+﻿@model int
+
+<h2>Product Order</h2>
+<form asp-action="ConfirmOrder" method="post">
+    @for (int i = 0; i < Model; i++)
+    {
+        <div>
+            <label asp-for="Name">Product Name:</label>
+            <input name="products[@i].Name" />
+            <label asp-for="Topings">Product Topings:</label>
+            <input name="products[@i].Topings" />
+        </div>
+    }
+    <button type="submit">Confirm Order</button>
+</form>
